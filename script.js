@@ -33,7 +33,7 @@ function checkURL(hash){
 
 function loadPage(url) { //loads the page via AJAx
     
-       url=url.replace('#page', '');
+       url=url.replace('#', '');
 //    function stageContent(content){
 //                $("#pageContent").html(content);
 //            }
