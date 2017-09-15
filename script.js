@@ -30,16 +30,43 @@ function checkURL(hash){
 		loadPage(hash);
     }
 }
-var delay=2000;
 
 function loadPage(url) { //loads the page via AJAx
-   url=url.replace('#page', '');
     
+       url=url.replace('#page', '');
+//    function stageContent(content){
+//                $("#pageContent").html(content);
+//            }
+//            
+//            function evaluateHash() {
+//                if(location.hash == "#JohnMayer") {
+//                    $.get("about.html", stageContent);
+//                }
+//                else if(location.hash == "#TaylorSwift") {
+//                    $.get("TaylorSwift.html", pageContent);
+//                }
+//                else if(location.hash == "#RyanReynolds") {
+//                    $.get("RyanReynolds.html", pageContent);
+//                }
+//                else if(location.hash == "#JimmyFallon") {
+//                    $.get("JimmyFallon.html", pageContent);
+//                }
+//                else if(location.hash == "#NationalParkService") {
+//                    $.get("NationalParkService.html", pageContent);
+//                }
+//                else {
+//                    $.get("index.html", pageContent);
+//                }
+//            }
+//            
+//            $(function(){
+//                evaluateHash();
+//                window.onhashchange = evaluateHash;
+//            });
+//    
+
     $.ajax({
         type: "POST",
-//        beforeSend: function(){
-//            $('#loading').css('visibility', 'visible');
-//        }
         url: "load_page.php",
         data: 'page='+url,
         dataType: "html",
