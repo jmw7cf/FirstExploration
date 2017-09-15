@@ -5,7 +5,7 @@ $(document).ready(function () {
     checkURL(); //this will check if the URL has a reference to a page. It will load it.
     
     $('ul li a').click(function(e){ //go through all of our navigation links
-        checkURL(this.hash); // assigns them to an onclick even usinr their own hash
+        checkURL(this.hash); // assigns them to an onclick event using their own hash
     });
     
     //filling in the default content
@@ -30,14 +30,16 @@ function checkURL(hash){
 		loadPage(hash);
     }
 }
+var delay=2000;
 
 function loadPage(url) { //loads the page via AJAx
    url=url.replace('#page', '');
     
-    $('#loading').css('visibility', 'visible');
-    
     $.ajax({
         type: "POST",
+//        beforeSend: function(){
+//            $('#loading').css('visibility', 'visible');
+//        }
         url: "load_page.php",
         data: 'page='+url,
         dataType: "html",

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>A simple AJAX website with jQuery</title>
+<title>Exploration 1</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -18,39 +18,58 @@
         }
         
         #pageContent{
-	margin-top:20px;
+	       margin-top:20px;
 
-	border:1px dashed #cccccc;
-	padding:10px;
+	       border:1px dashed #cccccc;
+	       padding:10px;
 		
-	-moz-border-radius: 5px;
-	-khtml-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-}
+	       -moz-border-radius: 5px;
+	       -webkit-border-radius: 5px;
+	       border-radius: 5px;
+        }
+        
+        .jumbotron{
+            margin-top: 20px;
+        }
+        
+        .nav img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        #twitter-icon {
+            height: 200px;
+            width: 200px;
+        }
     </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h1>A simple AJAX driven jQuery website</h1>
-    <h2>Because simpler is better</h2>
+    <div class="jumbotron row">
+        <img src="images/twitterIcon.png" id="twitter-icon">
+        <div id="header">
+            <h1>Exploration 1 -- Fake Twitter</h1>
+            <h3>Check out some of my favorite Twitter accounts!</h3>
+        </div>
+    </div>
     
-    <ul id="navigation">
-    <li><a href="#page1">John Mayer</a></li>
-    <li><a href="#page2">Taylor Swift</a></li>
-    <li><a href="#page3">Ryan Reynolds</a></li>
-    <li><a href="#page4">Empty</a></li>
-    <li><img id="loading" src="img/ajax_load.gif" alt="loading" /></li>
+    <ul class="nav nav-pills">
+        <li><a href="#page1"><img src="images/johnMayer.jpg" class="img-circle" alt="">John Mayer</a></li>
+        <li><a href="#page2"><img src="images/taylorSwift.jpg" class="img-circle" alt="">Taylor Swift</a></li>
+        <li><a href="#page3"><img src="images/ryanReynolds.jpg" class="img-circle" alt="">Ryan Reynolds</a></li>
+        <li><a href="#page4"><img src="images/jimmyFallon.jpg" class="img-circle" alt="">Jimmy Fallon</a></li>
+        <li><a href="#page5"><img src="images/nationalParkService.png" class="img-circle" alt="">National Parks Service</a></li>
+        <li><img id="loading" src="img/ajax_load.gif" alt="loading" /></li>
     </ul>
     
     <div class="clear"></div>
     
-    <div id="pageContent">Click a button to see an artist's tweets!</div>
+    <div id="pageContent"><h1>Click a button to see tweets!</h1></div>
     
     </div>
     <div class="clear"></div>
-<img src="img/bottom_bg.gif" alt="bottom" />
 </body>
 </html>
